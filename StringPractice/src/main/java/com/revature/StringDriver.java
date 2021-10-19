@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class StringDriver {
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner newObj = new Scanner(System.in);  // Create a Scanner object
 		System.out.println("Enter a string");
 		String s = newObj.nextLine();
@@ -17,14 +18,14 @@ public class StringDriver {
 	 * create a method that removes every other letter of a String passed in 
 	 * and return that newly created string.
 	 */
-	public static StringBuilder removeEveryOtherLetter(String s) {
+	public static String removeEveryOtherLetter(String s) {
 		StringBuilder sb = new StringBuilder();
 		for(int i=0; i<s.length(); i+=2) {
 		 sb.append(s.charAt(i));		
 		 }
 		System.out.println(sb);
 		
-		return sb;
+		return sb.toString();
 	}
 
 	/*
