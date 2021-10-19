@@ -11,6 +11,8 @@ public class StringDriver {
 		String s = newObj.nextLine();
 		
 		removeEveryOtherLetter(s);
+		//close scanner 
+		newObj.close();
 	}
 	
 	/*
