@@ -38,9 +38,10 @@ public class StringDriver {
 	 */
 	public static String getControllerValue(String url) {		
 		
-		String[] mySringArray = url.split("/");		
-		StringBuilder sb = new StringBuilder(mySringArray[1]);				
-		return sb.toString();
+		StringBuilder sb = new StringBuilder(url);	
+		String[] controllerValue = sb.toString().split("/");	
+					
+		return controllerValue[1];
 
 	
 	}
