@@ -36,8 +36,14 @@ public class StringDriver {
 	 * controller and resource can be any 1 word
 	 * return the value of controller as a string
 	 */
-	public String getControllerValue(String url) {
-		return null;
+	public static String getControllerValue(String url) {		
+		
+		StringBuilder sb = new StringBuilder(url);	
+		String[] controllerValue = sb.toString().split("/");	
+					
+		return controllerValue[1];
+
+	
 	}
 
 	
