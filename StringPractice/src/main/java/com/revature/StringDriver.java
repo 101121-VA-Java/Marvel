@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class StringDriver {
 	
 	public static void main(String[] args) {
-		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-		System.out.println("Enter a day");
-		String day = myObj.nextLine();
+		Scanner newObj = new Scanner(System.in);  // Create a Scanner object
+		System.out.println("Enter a string");
+		String s = newObj.nextLine();
+		
+		removeEveryOtherLetter(s);
 	}
 	
 	/*
@@ -15,8 +17,14 @@ public class StringDriver {
 	 * create a method that removes every other letter of a String passed in 
 	 * and return that newly created string.
 	 */
-	public String removeEveryOtherLetter(String s) {
-		return null;
+	public static StringBuilder removeEveryOtherLetter(String s) {
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<s.length(); i+=2) {
+		 sb.append(s.charAt(i));		
+		 }
+		System.out.println(sb);
+		
+		return sb;
 	}
 
 	/*
